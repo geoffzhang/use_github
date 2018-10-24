@@ -1,0 +1,19 @@
+1、创建github账户：geoffzhang
+在github上创建一个版本库：如 use_github,地址为git@github.com:geoffzhang/use_github.git
+使用如下命令创建SSH Key：
+ssh-keygen -t rsa -b 4096 -C "849567400@qq.com"
+将生成的.pub文件中的内容复制到github setting 左侧的SSH and GPG-keys-SSH keys配置页面中；
+
+2、测试账户
+ssh -T git@github.com
+如果出现，Hi geoffzhang ...   说明连接成功
+
+3、将github上创建的respositories克隆到本地
+使用命令：git clone git@github.com:geoffzhang/use_github.git
+
+4、添加内容--如添加文件“使用说明.txt”
+     4.1 在本地新建文件"使用说明.txt"
+     4.2 将文件加入到仓库中
+           git add 使用说明.txt；如果一次性添加所有的文件，则使用：git add .
+     4.3 执行提交
+           git commit -m "add a file"         // 引号中的内容为修改说明
