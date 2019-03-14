@@ -1,33 +1,11 @@
 1、创建github账户：geoffzhang
-     在github上创建一个版本库：如 use_github,地址为git@github.com:geoffzhang/use_github.git
+在github上创建一个版本库：如 use_github,地址为git@github.com:geoffzhang/use_github.git
 使用如下命令创建SSH Key：
-     $ssh-keygen -t rsa -b 4096 -C "849567400@qq.com"
-
-Generating public/private rsa key pair.
-Enter file in which to save the key (/c/Users/Administrator/.ssh/id_rsa): /c/Users/Administrator/.ssh/id_rsa           // 输入id_rsa.pub的保存地址(尽量和上一行的地址保持一致)
-Enter passphrase (empty for no passphrase):   // 输入密码
-Enter same passphrase again:
-Your identification has been saved in /c/Users/Administrator/.ssh/id_rsa.
-Your public key has been saved in /c/Users/Administrator/.ssh/id_rsa.pub.
-The key fingerprint is:
-SHA256:hg6u6BJt3utPMNghj1fm37LXnFMdmdzQ+QKowTvQREQ 849567400@qq.com
-The key's randomart image is:
-+---[RSA 4096]----+
-|       BE  .   ..|
-|      . + . . ...|
-|  . . o. +   ...=|
-|   * = .+     .=o|
-| .o B o S.     o.|
-|. oo = o .    . .|
-| + .. o o .o o   |
-|......   o. =    |
-|+...oo. ..   .   |
-+----[SHA256]-----+
-完成.pub文件的生成
+ssh-keygen -t rsa -b 4096 -C "849567400@qq.com"
 将生成的.pub文件中的内容复制到github setting 左侧的SSH and GPG-keys-SSH keys配置页面中；
 
 2、测试账户
-     $ssh -T git@github.com
+ssh -T git@github.com
 如果出现，Hi geoffzhang ...   说明连接成功
 
 3、将github上创建的respositories克隆到本地
@@ -54,3 +32,12 @@ git fetch -all   //获取github上的文件
 
 8、推送本地的版本信息到github上
 git push -u origin master
+
+9、错误处理办法：
+（1）、 Updates were rejected because the remote contains work that you do hint: not have locally. This is usually caused by another repository pushing hint: to the same ref. You may want to first integrate the remote changes hint: (e.g., 'git pull ...') 
+解决办法：
+git pull origin master
+git push origin master
+(2)、remote origin already exists
+解决办法：
+git remote rm origin
