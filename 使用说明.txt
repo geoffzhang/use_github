@@ -28,7 +28,7 @@ git commit -m "add context"
 
 7、本地仓库与远程仓库同步
 git remote add origin git@github.com:geoffzhang/use_github.git
-git fetch -all   //获取github上的文件
+git fetch --all   //获取github上的文件
 
 8、推送本地的版本信息到github上
 git push -u origin master
