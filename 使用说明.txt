@@ -42,3 +42,17 @@ git push origin master
 解决办法：
 git remote rm origin
 git remote add origin git@github.com:geoffzhang/use_github.git
+(3) git commit -m "update"
+
+*** Please tell me who you are.
+Run
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'geoff@geoff-ThinkPad-T460p.(none)')
+解决办法：
+git config --global "849567400@qq.com"
+git config --global "geoff"
